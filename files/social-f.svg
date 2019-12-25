@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 18" width="9" height="18">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #000000 } 
+	</style>
+	<g id="footer">
+		<g id="Social icons" style="opacity: 0.302">
+			<path id="social-f" class="shp0" d="M8.88 6.52L5.88 6.52L5.88 4.52C5.88 3.85 6.6 3.44 6.91 3.44C7.22 3.44 8.83 3.44 8.83 3.44L8.83 0.53L6.19 0.52C3.25 0.52 2.88 3.13 2.88 4.52L2.88 6.52L0.88 6.52L0.88 9.52L2.88 9.52C2.88 13.37 2.88 17.52 2.88 17.52L5.88 17.52C5.88 17.52 5.88 13.32 5.88 9.52L8.88 9.52L8.88 6.52Z" />
+		</g>
+	</g>
+</svg>

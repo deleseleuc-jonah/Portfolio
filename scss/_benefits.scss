@@ -1,0 +1,66 @@
+@import "global.scss";
+.services{
+    height: 575px;
+	width: 100vw;
+    box-sizing: border-box;
+    padding: 30px 15px 0 15px;
+	@include centered-flex;
+	flex-direction: column;
+	background: $tertiary;
+	color: $primary;
+	section{
+		display: flex;
+		margin: 0 auto;
+		height: 33.33%;
+		div, figure{
+			display: flex;
+			flex-direction: column;
+			@include spacing-reset;
+			height: 100%;
+			width: 50%;
+		}
+        figure{
+            align-items: center;
+        }
+		div{
+			h1{
+				@include spacing-reset;
+				font-size: 18px;
+				text-transform: uppercase;
+				font-weight: 400;
+			}
+			p{
+                max-width: 60vw;
+                margin-top: 20px;
+                margin-bottom: auto;
+				font-size: 14px;
+                font-weight: 300;
+				color: rgba(255,255,255,0.4);
+			}
+		}
+	}
+}
+.svg-container{
+	display: flex;
+}
+.service-svg{
+	margin-bottom: auto;
+}
+@media screen and (min-width: 768px){
+    .services{
+        height: 200px;
+        width: 100vwh;
+        padding-top: 50px;
+        flex-direction: row;
+        section{
+            @include spacing-reset;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 33.33%;
+        }
+        section:nth-of-type(2) > div{
+            order: 2;
+        }
+    }
+}

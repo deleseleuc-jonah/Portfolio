@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 7" width="8" height="7">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.702;fill: #262a32 } 
+	</style>
+	<g id="footer">
+		<path id="down-arrow" class="shp0" d="M1.21 0.84C1.53 0.84 7.2 0.84 7.43 0.84C7.72 0.84 7.93 1.14 7.76 1.42C7.63 1.65 4.89 6.26 4.66 6.65C4.51 6.91 4.14 6.91 3.99 6.65C3.81 6.37 1.07 1.75 0.88 1.41C0.74 1.17 0.89 0.84 1.21 0.84Z" />
+	</g>
+</svg>

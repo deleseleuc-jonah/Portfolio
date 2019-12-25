@@ -1,0 +1,251 @@
+$all-s: all 0.6s ease-in-out;
+$d-card-s: none !important;
+$d-row-s: opacity 0.6s ease-in;
+@mixin tile-details{
+	height: 40px;
+    width: 100%;
+    @include spacing-reset;
+    cursor: pointer;
+}
+@mixin all-transition{
+    transition: $all-s;
+	-moz-transition: $all-s;
+    -webkit-transition: $all-s;
+    -o-transition: $all-s;
+    -ms-transition: $all-s;
+}
+@mixin d-card-transition{
+    transition: $d-card-s;
+	-moz-transition: $d-card-s;
+    -webkit-transition: $d-card-s;
+    -o-transition: $d-card-s;
+    -ms-transition: $d-card-s;
+}
+@mixin d-row-transition{
+    transition: $d-row-s;
+	-moz-transition: $d-row-s;
+    -webkit-transition: $d-row-s;
+    -o-transition: $d-row-s;
+    -ms-transition: $d-row-s;
+}
+//Structure
+.products{
+    position: relative;
+    background: $secondary;
+    @include anchor-reset;
+    box-sizing: border-box;
+    padding: 1px 15px 70px 15px;
+    text-align: center;
+    input{
+		display: none;
+	}
+    button{
+        border: none;
+        background-color: transparent;
+    }
+    a{
+        @include spacing-reset;
+    }
+    h1{
+        height: 70px;
+        margin: 0 auto;
+        max-width: 100%;
+        @include all-transition;
+        @include centered-flex;
+        font-size: 18px;
+        font-weight: 800;
+        color: $primary;
+    }
+    h1::before,
+    h1::after {
+        content: '';
+        border-top: 3px solid $prod-b;
+        margin: 0 20px 0 0;
+        flex: 1 0 20px;
+    }
+   h1::after {
+        margin: 0 0 0 20px;
+    }
+}
+.products-row{
+    @include centered-flex;
+    justify-content: space-between;
+    position: relative;
+    height: 376px;
+    margin: 0 auto;
+    @include d-row-transition;
+    text-align: center;
+    color: $secondary;
+    figure{
+        position: absolute;
+        margin: 0 auto;
+        left: 160%;
+        transform: rotate(50deg);
+        @include all-transition;
+        @include spacing-reset;
+        height: 376px;
+        width: 290px;
+        opacity: 0;
+        overflow: hidden;
+        border-radius: 5px;
+        img{
+            @include spacing-reset;
+            display: block;
+            object-fit: cover;
+            height: 270px;
+            width: 100%;
+        }
+    }
+    figure:hover .tile-overlay{
+        
+    }
+}
+.products-row.hidden{
+    height: 1px;
+    opacity: 0;
+    top: 0;
+    left: 160%;
+}
+///Dots///
+.product-nav{
+    position: absolute;
+    height: 72px;
+    bottom: -19%; left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+	@include centered-flex;
+}
+///Events///
+#event4:checked ~ .product-nav #dot4, 
+#event5:checked ~ .product-nav #dot5, 
+#event6:checked ~ .product-nav #dot6,
+#event7:checked ~ .product-nav #dot7,{
+	border: solid 3px $primary;
+	background: transparent;
+}
+#load-more{
+    display: none;
+    position: relative;
+    width: 255px;
+    margin-top: 45px;
+    border: 3px solid;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 32px;
+    color: $primary;
+    section{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    span{
+        float: right;
+        margin-right: 33px;
+    }
+}
+input:checked + figure{
+    left: 50%;
+    transform: rotate(0deg);
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px){
+    .products{
+        padding: 1px 30px 70px 30px !important;
+        h1{
+            height: 100px;
+            font-size: 24px;
+        }
+    }
+}
+@media screen and (min-width: 1280px){
+    .products{
+        padding: 1px 55px 70px 55px !important;
+        h1{
+            height: 155px;
+        }
+    }
+    .products-row{
+        figure{
+            display: block;
+            position: static;
+            transform: rotate(0deg);
+            transform: translateX(0) !important;
+            opacity: 1;
+            @include d-card-transition;
+        }
+        figure:nth-of-type(2){
+            margin: 0 15px 0 30px;
+        }
+        figure:nth-of-type(3){
+            margin: 0 30px 0 15px;
+        }
+    }
+    .products-row:not(:first-of-type){
+        margin-top: 30px;
+    }
+    #load-more{
+        display: inline-block;
+    }
+    .product-nav{
+        display: none;
+    }
+}
+//Tile Styles//
+.tile-overlay{
+    height: 376px;
+    width: 100%;
+    background: rgba(65, 215, 170, 1);
+    border-radius: 5px;
+}
+.tile-info{
+    height: 55px;
+    width: 205px;
+    margin: 0 auto;
+    padding-top: 13px;
+    box-sizing: border-box;
+}
+.tile-wrap{
+    box-sizing: border-box;
+    padding-bottom: 8px;
+    height: 106px;
+    width: 100%;
+    background: $primary;
+
+}
+.tile-price{
+    @include tile-details;
+    @include spacing-reset;
+    @include centered-flex;
+    line-height: 50px;
+}
+.tile-button{
+    @include tile-details;
+    font-size: 0;
+    line-height: 35px;
+    text-transform: uppercase;
+    span:nth-child(1){
+        @include spacing-reset;
+        width: 102.5px;
+        height: 37px;
+        display: inline-block;
+        border: solid 3px $br-color;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        font-size: 14px;
+        color: $money-green;
+    }
+    span:nth-child(2){
+        @include spacing-reset;
+        width: 102.5px;
+        height: 37px;
+        display: inline-block;
+        border: solid 3px $br-color;
+        border-left: 1px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        font-size: 14px;
+    }
+}

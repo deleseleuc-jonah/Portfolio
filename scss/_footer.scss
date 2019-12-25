@@ -1,0 +1,132 @@
+footer{
+    background-color: $primary;
+    color: $secondary;
+    width: 100%;
+    font-family: $lato;
+    font-size: 13px;
+    font-weight: 400;
+    section, ul{
+        @include spacing-reset;
+    }
+    @include anchor-reset;
+    figure{
+        padding: 0;
+        margin: 45px auto;
+        display: flex;
+        justify-content: space-between;
+        width: 130px;
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+.foot-nav{
+    box-sizing: border-box;
+    padding: 20px 15px 0 15px;
+    a.drop{
+        font-weight: 500;
+        margin: 14px 0;
+    }
+    .drop-first{
+        font-size: 13px;
+        li{
+            margin: 14px 0;
+        }
+    }
+    .geo > li{
+        margin-bottom: 25px;
+    }
+    .d-fig{
+        display: none;
+    }
+}
+.cc{
+    margin-bottom: 25px;
+}
+.bottom-icons{
+    height: 55px;
+    width: 100vw;    
+    background: $secondary;
+    margin-top: 22px;
+    @include centered-flex;
+    @include icons;
+}
+@media screen and (min-width: 1280px){
+    footer{
+        .drop{
+            margin: 0 0 30px 0 !important;
+            display: block; 
+            height: 1em;
+            width: auto;
+            img{
+                display: none;
+            }
+        }
+    }
+    footer,
+    .foot-nav{
+     height: 345px;   
+    }
+    .foot-nav{
+        box-sizing: border-box;
+        padding: 0 55px;
+    }
+    .m-fig,
+    .bottom-icons{
+        display: none;
+    }
+    .d-wrap{
+        height: 300px;
+    }
+    .d-wrap,
+    .d-fig{
+        display: inline-flex !important;
+        padding-top: 45px;
+    }
+    .d-fig{
+        margin-top: 0;
+        float: right;
+    }
+    footer section{
+        .drop-first{
+            display: block;
+            li, a{
+                margin-top: 0 !important; 
+            }
+        }
+    }
+    span.d-warp,
+    .geo{
+        font-weight: 400;
+    }
+    span.d-wrap{
+        margin-right: 77px;
+        .cc{
+            margin: 0 0 17px 0;
+        }
+        .geo{
+            margin-right: 0 !important;
+        }
+        .drop{
+            margin-bottom: 17px !important;
+        }
+    }
+    .d-wrap{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .d-wrap.mid{
+        width: 500px;
+        margin-right: 100px;
+        ul:nth-child(2),
+        ul:nth-child(3){
+            margin-right: 120px;
+        }
+        ul:nth-child(3),
+        ul:nth-child(4){
+            margin-top: 53px;
+        }
+    }
+}
+

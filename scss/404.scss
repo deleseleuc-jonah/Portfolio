@@ -1,0 +1,9 @@
+$slider1: "../files/1st.png";
+@import "global.scss";
+body{
+    background: $quaternary;
+}
+@import "header.scss";
+@import "navigation.scss";
+@import "not-found.scss";
+@import "footer.scss";

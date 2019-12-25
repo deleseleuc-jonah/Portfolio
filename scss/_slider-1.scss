@@ -1,0 +1,222 @@
+$dots-s: all 0.35s ease-out;
+$slider-s: left 1s ease-in-out;
+$slider-s-out: left 0.8s 0.5s;
+$h-timing: opacity 1s 1s ease-in;
+$p-timing: opacity 0.8s 1.5s ease-in;
+@mixin transition-dots{
+	transition: $dots-s;
+	-moz-transition: $dots-s;
+    -webkit-transition: $dots-s;
+    -o-transition: $dots-s;
+    -ms-transition: $dots-s;
+}
+@mixin left-checked{
+	transition: $slider-s;
+	-moz-transition: $slider-s;
+    -webkit-transition: $slider-s;
+    -o-transition: $slider-s;
+    -ms-transition: $slider-s;
+	z-index: 2;
+	left: 0;
+}
+@mixin left-unchecked{
+    transition: $slider-s-out;
+	-moz-transition: $slider-s-out;
+    -webkit-transition: $slider-s-out;
+    -o-transition: $slider-s-out;
+    -ms-transition: $slider-s-out;
+    z-index: 0;
+    left: 160%;
+}
+@mixin h-checked{
+	transition: $h-timing;
+	-moz-transition: $h-timing;
+    -webkit-transition: $h-timing;
+    -o-transition: $h-timing;
+    -ms-transition: $h-timing;
+	z-index: 2;
+}
+@mixin p-checked{
+	transition: $p-timing;
+	-moz-transition: $p-timing;
+    -webkit-transition: $p-timing;
+    -o-transition: $p-timing;
+    -ms-transition: $p-timing;
+	z-index: 2;
+}
+
+.slider{
+	display: block;
+	margin: 79px auto 17px auto;
+    height: 510px;
+	width: 90%;
+	input{
+		opacity: 0;
+	}
+    @include anchor-reset;
+}
+.slider-box{
+	position: relative;
+    @include full-dimensions;
+	border-radius: 5px;
+	overflow: hidden;
+}
+///Slider Events///
+
+#event1:checked + #first,
+#event2:checked + #second, 
+#event3:checked + #third{
+	@include left-checked;
+    .content-p, .content-h,
+    .content-p + button{
+        opacity: 1;
+    }
+}
+//Slide & Content
+
+.slide{
+	@include full-dimensions;
+	@include spacing-reset;
+	@include left-unchecked;
+    position: absolute;
+	top: 0;
+	border-radius: 5px;
+	color: $primary;
+}
+.content-p,
+.content-p + button{
+    @include p-checked;
+    opacity: 0;
+    margin-left: 15px;
+}
+.content-h{
+    @include h-checked;
+    opacity: 0;
+    margin-left: 15px;
+}
+.content-p,
+.content-p + button{
+    font-size: 14px;
+    color: $primary;
+}
+.content-p + button{
+    height: 38px;
+    display: block;
+    margin: 60px auto 68px auto; 
+    padding: 12px 34px;
+    border: solid 1px $primary;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 100;
+    line-height: 0px;
+    text-transform: uppercase;
+    background: transparent;
+}
+.content-p{
+    margin: 52px 15px 0 15px;
+}
+.content-h{
+    margin: 35px 15px 0 15px;
+    font-size: 28px;
+    font-weight: 700;
+}
+//Nav
+
+.slide-nav{
+	width: 100%;
+    max-width: 878px;
+	height: 1rem;
+	position: absolute;
+	bottom: 5%;
+	@include centered-flex;
+	z-index: 99;
+}
+@include dots;
+.dots:hover{
+	border: solid 4px $primary;
+}
+#event1:checked ~ .slide-nav #dot1, 
+#event2:checked ~ .slide-nav #dot2, 
+#event3:checked ~ .slide-nav #dot3{
+	border: solid 3px $primary;
+	background: transparent;
+}
+
+///Slider Images///
+
+.bg1{
+	background: url($slider1) 100% 25% no-repeat $secondary;
+	background-size: cover;
+}
+.bg2{
+	background: url($slider2) 65% no-repeat;
+	background-size: cover;
+}
+.bg3{
+	background: url($slider3) center no-repeat;
+	background-size: cover;
+}
+// Responsive
+@media screen and (min-width: 768px){
+    .slide, .slider-box, .slider{
+        max-width: 870px;
+    }
+    .slider{
+        display: inline-block;
+        margin-top: 96px;
+        margin-left: 30px;
+    }
+	.content-p{
+		max-width: 328px;
+        margin-top: 110px;    
+        margin-left: 60px;
+	}
+    .content-h{
+        margin-top: 77px;
+        font-size: 48px;
+        margin-left: 60px;
+    }
+   .content-p + button{
+        margin-top: 50px;
+        margin-left: 60px;
+        margin-bottom: 100px;
+    }
+    #second{
+        text-align: center;
+        .content-h,{
+            margin-right: 60px;  
+        }
+        .content-p{
+            margin: 100px auto 0 auto;
+        }
+        .content-p + button{
+            margin: 50px auto 100px auto;
+        }
+    }
+    #third{
+        text-align: right;
+        .content-h, .content-p,
+        .content-p + button{
+            margin-right: 60px;
+        }
+        .content-p{
+            float: right;
+        }
+        .content-p + button{
+            clear: both;
+            float: right;
+            margin: 50px 60px 100px 0;
+        }
+    }
+}
+@media screen and (min-width: 1280px){
+    .slider{
+        margin-left: 55px;
+    }
+}
+
+
+
+
+
+

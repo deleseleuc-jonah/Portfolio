@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 18" width="9" height="18">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #3a5b96 } 
+	</style>
+	<g id="sales">
+		<g id="facebook">
+			<g id="but">
+				<path id="f" class="shp0" d="M8 6L5 6L5 4C5 3.34 5.72 2.92 6.03 2.92C6.35 2.92 7.96 2.92 7.96 2.92L7.96 0.01L5.31 0C2.37 0 2 2.61 2 4L2 6L0 6L0 9L2 9C2 12.85 2 17 2 17L5 17C5 17 5 12.81 5 9L8 9L8 6Z" />
+			</g>
+		</g>
+	</g>
+</svg>

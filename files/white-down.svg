@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 6" width="7" height="6">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.702;fill: #ffffff } 
+	</style>
+	<g id="navigation">
+		<path id="white-down" class="shp0" d="M0.39 0.02C0.71 0.02 6.35 0.02 6.58 0.02C6.86 0.02 7.08 0.3 6.91 0.59C6.77 0.82 4.05 5.4 3.82 5.79C3.67 6.05 3.3 6.05 3.15 5.79C2.98 5.51 0.24 0.91 0.05 0.58C-0.09 0.33 0.07 0.02 0.39 0.02Z" />
+	</g>
+</svg>

@@ -1,0 +1,263 @@
+/// Desktop Navigation ///
+.d-nav{
+    display: none;
+    ul, li, .drop{
+        display: inline-block;
+        height: 100%;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    li{
+        margin-right: 26px;
+    }
+    li:nth-child(1){
+        margin-right: 0;
+    }
+    li:nth-last-child(1){
+        margin-right: 0;
+    }
+    a{
+        margin-right: auto;
+    }
+    .drop{
+        @include centered-flex;
+        img{
+            margin-left: 24px;
+            margin-right: 8px;
+        }
+    }
+    .drop.down{
+        width: 124px;
+    }
+    .drop-first{
+        display: none;
+        height: auto;
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 60px 55px 63px 55px;
+        font-family: $lato;
+        > li{
+            .drop-second{
+                height: 100%;
+                @include spacing-reset;
+                display: inline-flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                }
+                li{
+                    display: block;
+                    height: 1em;
+                    font-size: 16px;
+                    text-transform: none;
+                }
+                li:not(:first-of-type){
+                    margin-top: 16px;
+                }
+            }
+            .drop-second:nth-of-type(1){
+                width: 560px;
+                margin-right: 145px;
+            }
+        }
+        figure{
+            display: inline-block;
+            height: 300px;
+            width: 270px;
+            border-radius: 8px;
+            transform: scaleX(-1);
+            background: url($slider1) 95% 20% no-repeat $secondary;
+            background-size: stretch;
+        }
+        .top-a{
+            width: 100%;
+            height: 1em;
+            margin-bottom: 29px;
+            font-size: 14px;
+            font-weight: 800;
+        }
+    }
+    .drop.open ~ .drop-first{
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 80px; left: 0;
+        background: $secondary;
+        color: $primary;
+    }
+}
+.top-icons{
+    @include centered-flex;
+    margin-right: 55px;
+    display: inline-flex;
+    @include icons;
+    figure{
+        img:last-child{
+            margin-right: 0;
+        }
+    }
+}
+.d-ux{
+    width: 234px;
+    text-align: center;
+    a{
+        display: inline-block;
+        width: 35px;
+    }
+    li:nth-child(1){
+        margin-right:37px;
+    }
+}
+@media screen and (min-width: 1280px){
+    .d-nav{
+        @include centered-flex;
+    }
+}
+
+
+/// Mobile Navigation///
+$nav-open-s: 400ms ease-in;
+$x-s: cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+$anchor-open-s: .5s ease-in-out;
+$anchor-close-s: 200ms ease-in-out;
+@mixin burger-open{
+    transition: $nav-open-s;
+	-moz-transition: $nav-open-s;
+    -webkit-transition: $nav-open-s;
+    -o-transition: $nav-open-s;
+    -ms-transition: $nav-open-s;
+}
+@mixin burger-x{
+    transition: all $x-s;
+    -moz-transition: all $x-s;
+    -webkit-transition: all $x-s;
+    -o-transition: all $x-s;
+    -ms-transition: all $x-s;
+}
+@mixin anchor-open{
+    transition: $anchor-open-s;
+    -moz-transition: $anchor-open-s;
+    -webkit-transition: $anchor-open-s;
+    -o-transition: $anchor-open-s;
+    -ms-transition: $anchor-open-s;
+}
+@mixin anchor-close{
+    transition: $anchor-open-s;
+    -moz-transition: $anchor-close-s;
+    -webkit-transition: $anchor-close-s;
+    -o-transition: $anchor-close-s;
+    -ms-transition: $anchor-close-s;
+}
+.m-nav{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 15px 0 15px;
+	top: 100%; left: 0;
+    position: absolute;
+    text-align: left;
+    transform: scale(1, 0);
+    transform-origin: top;
+    @include burger-open;
+    @include anchor-reset;
+    color: $primary;
+	img, a{
+        opacity: 0;
+        transition: opacity $anchor-open-s ease-in-out;
+	}
+    .drop{
+        margin-top: 14px;
+        font-size: 14px;
+    }
+    .drop.open ~ .drop-first{
+        display: flex !important;
+        width: 160px !important;
+        margin-top: 14px;
+        font-size: 16px !important;
+        img{
+            margin-left: auto;
+        }
+    }
+    .drop-first.open > img{
+        transform: rotate(180deg);
+    }
+    .drop-second{
+        font-size: 16px;
+    }
+}
+.nav-img{
+    opacity: 0;
+    width: 100%;
+    height: 280px;
+    margin: 20px 0;
+    border-radius: 8px;
+    transform: scaleX(-1);
+    background: url($slider1) 100% 5% no-repeat $secondary;
+    background-size: cover;
+}
+
+#nav-input{
+    display: none;
+}
+.nav-toggle{
+	position: absolute;
+    cursor: pointer;
+	top: 0;
+	left: 0;
+	margin-left: 1em;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	span::before, span::after, span{
+		position: relative;
+		display: block;
+		height: 2px;
+		width: 18px;
+		border-radius: 2px;
+		background: $secondary;
+		content: '';
+        @include burger-x;
+	}
+	span::before, span::after{
+	position: absolute;	
+	}
+	span::before{
+		top: 0.66em;
+	}
+	span::after{
+		bottom: 0.66em;
+	}
+}
+#nav-input:checked ~ .m-nav{
+    @include burger-open;
+    transform: scale(1,1);
+    background: $secondary;
+    img, a, figure{
+        opacity: 1;
+        transition: opacity 250ms 250ms ease-in-out;
+    }
+}
+#nav-input:checked + label{
+    span, span::before, span::after{
+        @include burger-x;
+    }
+    span::before{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    span::after{
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    span{
+        background: $primary;
+    }
+}
+@media screen and (min-width: 1280px){
+    .nav-toggle{
+        display: none;
+    }
+}

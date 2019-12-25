@@ -1,0 +1,48 @@
+
+.banner{
+	height: 185px; width: 100vw;
+    @include centered-flex;
+    flex-direction: column;
+	@include spacing-reset;
+    text-align: center;
+    color: $primary;
+	background: no-repeat url(../files/banner-osf.svg);
+    background-size: cover;
+	h1{
+		width: 100%;
+        @include spacing-reset;
+		font-size: 30px;
+        font-weight: 600;
+	}
+	p{
+        margin-top: 40px;
+		width: 95%;
+        font-size: 14px;
+        font-weight: 300;
+	}
+	p{
+        max-width: 75vw;
+	}
+}
+@media screen and (min-width: 768px){
+    .banner{
+        height: 250px;
+        h1{
+            font-size: 39px;
+        }
+        p{
+            max-width: 40vw;
+	    }
+    }
+}
+@media screen and (min-width: 1280px){
+    .banner{
+        height: 445px;
+        h1{
+            font-size: 48px;
+        }
+        p{
+            max-width: 40vw;
+	    }
+    }
+}

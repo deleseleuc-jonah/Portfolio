@@ -1,0 +1,89 @@
+aside{
+    position: absolute;
+    margin: 96px 0 0 30px;
+    z-index: -1;
+    opacity:0;
+    display: inline-block;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+    @include anchor-reset;
+}
+.sales-box, .sales{
+    overflow: auto;
+}
+.sales-box{
+    height: 510px;
+    width: 270px;
+    .sales ~ section, .sales, h1, h2, h3, p, span, a{
+        @include spacing-reset;
+    }
+}
+.sales{
+    @include centered-flex;
+    flex-direction: column;
+    height: 335px;
+    width: 100%;
+    border-radius: 5px;
+    background: no-repeat url(../files/palm.svg) $septenary;
+    background-position: -5% 115%;
+    color: $primary;
+    h1{
+        @include spacing-reset;
+        margin-top: 45px;
+        font-size: 100px;
+        font-weight: 800;
+    }
+    h2{
+        @include spacing-reset;
+        margin-top: 54px;
+        margin-bottom: auto;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 300;
+    }
+}
+.sales ~ section{
+    display: inline;
+    height: 175px;
+    padding: 1px;
+    box-sizing: border-box;
+    width: 100%;
+    color: $senary;
+    h3{
+        margin-top: 39px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    p{
+        width: 193px;
+        margin: 18px auto 0 auto;
+        font-size: 13px;
+    }
+    button{
+        @include centered-flex;
+        height: 35px;
+        width: 147px;
+        margin: 28px auto 0 auto;
+        text-transform: uppercase;
+        background: transparent;
+        font-size: 14px;
+        border: solid $octonary 3px;
+        border-radius: 25px;
+        color: $octonary;
+        a{
+            @include centered-flex;
+            margin-left: 18px;
+            margin-right: auto;
+            line-height: 21px;
+        }
+        span{
+            margin-left: 20px;
+        }
+    }
+}
+@media screen and (min-width: 1280px){
+    aside{
+        margin-left: 30px !important;
+        opacity: 1 !important;
+    }
+}

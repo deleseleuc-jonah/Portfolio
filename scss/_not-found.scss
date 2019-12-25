@@ -1,0 +1,130 @@
+//Structure
+article{
+    width: 100vw;
+    margin-bottom: 45px;
+    margin-top: 60px;
+    padding: 15px;
+    box-sizing: border-box;
+    p, h1, h2, h3, a, section, figure{
+        @include spacing-reset;
+    }
+    @include anchor-reset;
+    p{
+        max-width: 578px;
+    }
+    section{
+        position: relative;
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+        background-position: -55px;
+        background-image: url(../files/exclamation-stop.svg);
+        background-repeat: no-repeat;
+    }
+    div{
+        max-width: 570px;
+        box-sizing: border-box;
+        color: rgba(0,0,0,0.7);
+        input{
+            margin-top: 23px;
+            width: 100%;
+            height: 36px;
+            box-shadow: 1px 1px 1px;
+            border: solid rgba(0,0,0,0.5) 1px;
+            border-radius: 25px;
+            background: no-repeat url(../files/search-icon.svg) 95% $primary;
+        }
+    }
+    //paragraph & header styling + media queries
+    .return{
+        font-weight: 400;
+        word-spacing: 14px;
+        margin: 15px auto 0 auto;
+        font-size: 13px;
+        color: $senary;
+        a{
+            color: $septenary !important;
+        }
+    }
+    h2{
+        width: 100%;
+        max-width: 1170px;
+        text-align: center;
+    }
+    .four04{
+        @include centered-flex;
+        margin: 25px auto 15px auto;
+        font-size: 48px;
+        color: $senary;
+    }
+    .four04::before,
+    .four04::after {
+        content: '';
+        border-top: 1px solid rgba(69, 65, 62, 0.2);
+        margin: 0 20px 0 0;
+        flex: 1 0 20px;
+    }
+   .four04::after {   
+        margin: 0 0 0 20px;
+    }
+    h3{
+        @include spacing-reset;
+        font-size: 24px;
+        font-weight: 800;
+        color: rgba(0,0,0,1);
+    }
+    p:nth-child(3){
+        margin: 30px 0 17px 0;
+    }
+    p:nth-child(4){
+        color: $quinary;
+        margin-bottom: 35px;
+    }
+    h3:nth-child(1){
+        margin-bottom: 24px;
+    }
+}
+@media screen and (min-width: 768px){
+    article{
+        padding: 30px;
+    }
+    h2{
+        margin: 25px 0 52px 0;
+    }
+    section{
+        overflow:auto;
+        background: $primary;
+    }
+    div{
+        margin: 70px 100px 60px 0;
+        float: right;
+        padding: 0;
+    }
+    div input{
+        box-shadow: none !important;
+        border: solid $br-color 3px !important;
+    }
+}
+@media screen and (min-width: 1280px){
+    article{
+        padding: 1px 0 0 0;
+    }
+   .return{
+        margin-top: 55px !important;
+    }
+    p:nth-child(3){
+        margin: 48px 0 70px 0 !important;
+    }
+    .oops{
+        display: block !important;
+        font-size: 113px;
+        font-weight: 800;
+        color: $septenary;
+        position: absolute;
+        left: 8%;    
+        top: 33%;
+    }
+}
+.oops{
+   display: none; 
+}
