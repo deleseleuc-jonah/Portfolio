@@ -201,15 +201,14 @@ input:checked + figure{
     border-radius: 5px;
 }
 .tile-info{
-    height: 55px;
     width: 205px;
     margin: 0 auto;
-    padding-top: 13px;
+    padding: 13px 0;
     box-sizing: border-box;
 }
 .tile-wrap{
     box-sizing: border-box;
-    padding-bottom: 8px;
+    padding: 0 8px 8px 8px;
     height: 106px;
     width: 100%;
     background: $primary;
@@ -219,7 +218,6 @@ input:checked + figure{
     @include tile-details;
     @include spacing-reset;
     @include centered-flex;
-    line-height: 50px;
 }
 .tile-button{
     @include tile-details;

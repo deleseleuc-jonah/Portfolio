@@ -6,8 +6,9 @@
 	@include spacing-reset;
     text-align: center;
     color: $primary;
-	background: no-repeat url(../files/banner-osf.svg);
+	background: no-repeat url(../files/beach.jpg);
     background-size: cover;
+    background-position: left center;
 	h1{
 		width: 100%;
         @include spacing-reset;

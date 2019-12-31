@@ -54,6 +54,9 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 		opacity: 0;
 	}
     @include anchor-reset;
+    h1, p, a{
+        text-shadow: 2px 2px 2px black;
+    }
 }
 .slider-box{
 	position: relative;

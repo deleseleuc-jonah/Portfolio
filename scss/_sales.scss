@@ -7,6 +7,7 @@ aside{
     text-align: center;
     transition: opacity 0.3s ease-in-out;
     @include anchor-reset;
+
 }
 .sales-box, .sales{
     overflow: auto;
@@ -57,6 +58,7 @@ aside{
         margin-top: 0;
         font-size: 70px;
         font-weight: 800;
+        text-shadow: 2px 2px 2px black;
     }
     h2{
         @include spacing-reset;
@@ -71,6 +73,7 @@ aside{
         font-weight: 700;
         margin-top: 1em !important;
         text-transform: none !important;
+        text-shadow: 2px 2px 2px black;
     }
 }
 .sales ~ section{
