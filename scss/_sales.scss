@@ -17,6 +17,31 @@ aside{
     .sales ~ section, .sales, h1, h2, h3, p, span, a{
         @include spacing-reset;
     }
+    button{
+        @include centered-flex;
+        height: 35px;
+        width: 75px;
+        margin: 28px auto 0 auto;
+        text-transform: uppercase;
+        background: transparent;
+        font-size: 14px;
+        font-weight: 500;
+        border: solid rgba(0, 0, 0, 1) 3px;
+        border-radius: 25px;
+        color: rgba(0, 0, 0, 1);
+        a{
+            @include centered-flex;
+            margin-left: 18px;
+            margin-right: auto;
+            line-height: 21px;
+        }
+        span{
+            margin: 2px 5px 0 0;
+        }
+    }
+}
+.connect{
+    width: 147px !important;
 }
 .sales{
     @include centered-flex;
@@ -24,13 +49,13 @@ aside{
     height: 335px;
     width: 100%;
     border-radius: 5px;
-    background: no-repeat url(../files/palm.svg) $septenary;
+    background: $septenary;
     background-position: -5% 115%;
     color: $primary;
     h1{
         @include spacing-reset;
-        margin-top: 45px;
-        font-size: 100px;
+        margin-top: 0;
+        font-size: 70px;
         font-weight: 800;
     }
     h2{
@@ -40,6 +65,12 @@ aside{
         text-transform: uppercase;
         font-size: 24px;
         font-weight: 300;
+    }
+    a > h2{
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 1em !important;
+        text-transform: none !important;
     }
 }
 .sales ~ section{
@@ -58,27 +89,6 @@ aside{
         width: 193px;
         margin: 18px auto 0 auto;
         font-size: 13px;
-    }
-    button{
-        @include centered-flex;
-        height: 35px;
-        width: 147px;
-        margin: 28px auto 0 auto;
-        text-transform: uppercase;
-        background: transparent;
-        font-size: 14px;
-        border: solid $octonary 3px;
-        border-radius: 25px;
-        color: $octonary;
-        a{
-            @include centered-flex;
-            margin-left: 18px;
-            margin-right: auto;
-            line-height: 21px;
-        }
-        span{
-            margin-left: 20px;
-        }
     }
 }
 @media screen and (min-width: 1280px){
