@@ -9,15 +9,14 @@ footer{
         @include spacing-reset;
     }
     @include anchor-reset;
-    figure{
+    .m-fig{
         padding: 0;
         margin: 45px auto;
-        display: flex;
-        justify-content: space-between;
-        width: 130px;
+        @include centered-flex;
+        width: 100%;
+        font-size: 30px;
         img{
-            height: 100%;
-            width: auto;
+            height: 30px;
         }
     }
 }
@@ -47,10 +46,13 @@ footer{
 .bottom-icons{
     height: 55px;
     width: 100vw;    
-    background: $secondary;
     margin-top: 22px;
     @include centered-flex;
     @include icons;
+    img{
+        height: 30px;
+        color: white;
+    }
 }
 @media screen and (min-width: 1280px){
     footer{
