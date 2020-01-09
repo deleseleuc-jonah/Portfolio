@@ -117,6 +117,9 @@ header .big-icon {
   min-height: 60px;
 }
 header .big-icon figure {
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
   height: 80%;
 }
 header .big-icon img {
@@ -439,44 +442,36 @@ header .heading {
   }
 }
 .backdrop {
+  height: calc(100% - 62px);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   margin: 62px 0 0 0;
   padding: 0px;
   background-size: cover;
-}
-
-#home-drop {
   background-image: url(../files/images/castle.jpg);
-  height: 95%;
-  width: 100%;
   background-position: bottom;
 }
-
-#contact-drop {
-  height: 50%;
-  width: 100%;
-}
-
-.heading > h1 {
+.backdrop h1 {
+  color: white;
+  font-size: 60px;
   display: block;
   letter-spacing: 0.1em;
-  font-size: 6vw;
+  margin-top: auto;
+  font-size: 70px;
+}
+.backdrop h1::after {
+  position: relative;
+  z-index: 1;
+  bottom: -26px;
+  display: block;
+  content: "About";
+  transform: scaleY(-1);
+  color: rgba(255, 255, 255, 0.2);
 }
 
-#home-heading {
-  color: white;
-  padding: 25% 0px 0px 0px;
-  text-shadow: 0px 100px 5px;
-}
-
-#contact-heading {
-  padding: 5% 0px 0px 0px;
-}
-
-/*Home Columns*/
 .directory {
   display: block;
   height: 100%;
@@ -485,7 +480,7 @@ header .heading {
 
 .directory > p {
   height: 10%;
-  width: 80%;
+  width: 90%;
   font-size: 1.7vw;
   border-radius: 5px;
   box-shadow: 0px 5px 5px black;
@@ -494,6 +489,24 @@ header .heading {
   background-color: white;
 }
 
+@media screen and (min-width: 768px) {
+  .backdrop h1 {
+    font-size: 85px;
+  }
+
+  .disable-transparency {
+    height: 79px;
+  }
+
+  .backdrop {
+    min-height: calc(100% - 79px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .backdrop h1 {
+    font-size: 100px;
+  }
+}
 footer {
   background-color: white;
   color: #262a33;

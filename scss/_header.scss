@@ -16,6 +16,7 @@ header{
         height: 100%;
         min-height: 60px;
         figure{
+            @include centered-flex;
             height: 80%;
         }
         img{
