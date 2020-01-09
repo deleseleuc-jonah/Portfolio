@@ -1,0 +1,55 @@
+.backdrop{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column-reverse;
+	margin: 62px 0 0 0; padding: 0px;
+	background-size: cover;
+}
+	#home-drop{
+		background-image: url(../files/images/castle.jpg);
+		height: 95%; width: 100%;
+		background-position: bottom;
+	}
+	#contact-drop{
+		height: 50%; width: 100%;
+}
+.heading > h1{
+	display: block;
+	letter-spacing: 0.1em;
+	font-size: 6vw;
+}
+#home-heading{
+	color: white;
+	padding: 25% 0px 0px 0px;
+	text-shadow: 0px 100px 5px;
+	}
+	#reflect{
+
+	}
+	#contact-heading{
+	padding: 5% 0px 0px 0px;
+	}
+
+	
+/*Home Columns*/
+.directory{
+	display: block;
+    height: 100%;
+    background: $quaternary;
+}
+
+.directory > p{
+	height: 10%;
+	width: 80%;
+	font-size: 1.7vw;
+	border-radius: 5px;
+	box-shadow: 0px 5px 5px black;
+    margin: 0 auto 1% auto; padding: 3% 3%;
+	background-color: rgba(255,255,255);
+}
+
+
+
+
+
