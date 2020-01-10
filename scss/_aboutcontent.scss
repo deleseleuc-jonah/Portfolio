@@ -30,15 +30,14 @@
 .directory{
 	display: block;
     height: 100%;
-    background: $quaternary;
+	background: $quaternary;
+	padding: 1em;
+	box-sizing: border-box;
 }
 
 .directory > p{
-	height: 10%;
 	width: 90%;
-	font-size: 1.7vw;
 	border-radius: 5px;
-	box-shadow: 0px 5px 5px black;
     margin: 0 auto 1% auto; padding: 3% 3%;
 	background-color: rgba(255,255,255);
 }

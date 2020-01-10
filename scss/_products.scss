@@ -84,10 +84,10 @@ $d-row-s: opacity 0.6s ease-in;
         transform: rotate(50deg);
         @include all-transition;
         @include spacing-reset;
+        pointer-events: auto;
         height: 376px;
         width: 290px;
         opacity: 0;
-        overflow: hidden;
         border-radius: 5px;
         img{
             @include spacing-reset;
@@ -95,14 +95,9 @@ $d-row-s: opacity 0.6s ease-in;
             object-fit: cover;
             height: 270px;
             width: 100%;
+            pointer-events: none;
         }
     }
-}
-.products-row.hidden{
-    height: 1px;
-    opacity: 0;
-    top: 0;
-    left: 160%;
 }
 ///Dots///
 .product-nav{
@@ -125,22 +120,13 @@ $d-row-s: opacity 0.6s ease-in;
     display: none;
     position: relative;
     width: 255px;
+    height: 50px;
     margin-top: 45px;
     border: 3px solid;
     border-radius: 25px;
     text-transform: uppercase;
     font-size: 14px;
-    line-height: 32px;
     color: $primary;
-    section{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    span{
-        float: right;
-        margin-right: 33px;
-    }
 }
 input:checked + figure{
     left: 50%;
@@ -167,7 +153,6 @@ input:checked + figure{
     }
     .products-row{
         figure{
-            z-index: 1;
             display: block;
             position: static;
             transform: rotate(0deg);
@@ -175,6 +160,7 @@ input:checked + figure{
             opacity: 1;
             pointer-events: auto;
             @include d-card-transition;
+            transition: transform 0.2s !important;
         }
         figure:nth-of-type(2){
             margin: 0 15px 0 30px;
@@ -183,7 +169,8 @@ input:checked + figure{
             margin: 0 30px 0 15px;
         }
         figure:hover{
-            transform: scale(1.2);  
+            transform: scale(1.15) !important;
+            z-index: 99;
         }
     }
     .products-row:not(:first-of-type){
@@ -197,12 +184,6 @@ input:checked + figure{
     }
 }
 //Tile Styles//
-.tile-overlay{
-    height: 376px;
-    width: 100%;
-    background: rgba(65, 215, 170, 1);
-    border-radius: 5px;
-}
 .tile-info{
     width: 205px;
     margin: 0 auto;
@@ -221,32 +202,4 @@ input:checked + figure{
     @include tile-details;
     @include spacing-reset;
     @include centered-flex;
-}
-.tile-button{
-    @include tile-details;
-    font-size: 0;
-    line-height: 35px;
-    text-transform: uppercase;
-    span:nth-child(1){
-        @include spacing-reset;
-        width: 102.5px;
-        height: 37px;
-        display: inline-block;
-        border: solid 3px $br-color;
-        border-top-left-radius: 25px;
-        border-bottom-left-radius: 25px;
-        font-size: 14px;
-        color: $money-green;
-    }
-    span:nth-child(2){
-        @include spacing-reset;
-        width: 102.5px;
-        height: 37px;
-        display: inline-block;
-        border: solid 3px $br-color;
-        border-left: 1px;
-        border-top-right-radius: 25px;
-        border-bottom-right-radius: 25px;
-        font-size: 14px;
-    }
 }
