@@ -444,7 +444,7 @@ header a:link, header a:visited, header a:hover, header a:active {
 .slider {
   display: block;
   margin: 79px auto 17px auto;
-  height: 510px;
+  height: calc(100vh - 96px);
   width: 90%;
 }
 .slider input {
@@ -629,6 +629,7 @@ header a:link, header a:visited, header a:hover, header a:active {
     margin-top: 96px;
     margin-left: 30px;
     max-width: 100%;
+    height: calc(100vh - 115px);
   }
 
   .content-p {
