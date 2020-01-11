@@ -161,13 +161,17 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 }
 // Responsive
 @media screen and (min-width: 768px){
-    .slide, .slider-box, .slider{
-        max-width: 870px;
+    .slide{
+        width: 100%;
+    }
+    .slider-box{
+        max-width: 100%;
     }
     .slider{
         display: inline-block;
         margin-top: 96px;
         margin-left: 30px;
+        max-width: 100%;
     }
 	.content-p{
 		max-width: 328px;
@@ -214,7 +218,9 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 }
 @media screen and (min-width: 1280px){
     .slider{
-        margin-left: 55px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 70%;
     }
 }
 

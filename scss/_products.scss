@@ -113,7 +113,7 @@ $d-row-s: opacity 0.6s ease-in;
 #event4:checked ~ .product-nav #dot4, 
 #event5:checked ~ .product-nav #dot5, 
 #event6:checked ~ .product-nav #dot6,
-#event7:checked ~ .product-nav #dot7,{
+#event7:checked ~ .product-nav #dot7{
 	border: solid 3px $primary;
 	background: transparent;
 }

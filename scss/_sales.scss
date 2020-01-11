@@ -7,11 +7,13 @@ aside{
     text-align: center;
     transition: opacity 0.3s ease-in-out;
     @include anchor-reset;
-    overflow-x: hidden;
-
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
 .sales-box, .sales{
-    overflow: auto;
+    overflow: hidden;
 }
 .sales-box{
     height: 510px;
@@ -25,29 +27,27 @@ aside{
         width: 75px;
         margin: 28px auto 0 auto;
         text-transform: uppercase;
-        background: transparent;
         font-size: 14px;
         font-weight: 500;
-        border: solid rgba(0, 0, 0, 1) 3px;
-        border-radius: 25px;
-        color: rgba(0, 0, 0, 1);
+        border: solid  rgba(38, 42, 51, 0.3) 3px;
+        border-radius: 15px;
+        color: $primary;
+        background: $secondary;
         a{
             line-height: 21px;
         }
     }
 }
 .connect{
-    width: 147px !important;
+    width: 125px !important;
 }
 .sales{
-    @include centered-flex;
-    flex-direction: column;
-    height: 335px;
-    width: 100%;
-    border-radius: 5px;
-    background: $septenary;
+    height: 270px;
+    width: 270px;
+    border-radius: 100%;
     background-position: -5% 115%;
     color: $primary;
+    margin: 75px 0 0 0!important;
     h1{
         @include spacing-reset;
         margin-top: 0;
@@ -72,8 +72,7 @@ aside{
     }
 }
 .sales ~ section{
-    display: inline;
-    height: 175px;
+    height: 100px;
     padding: 1px;
     box-sizing: border-box;
     width: 100%;
@@ -92,7 +91,9 @@ aside{
 @media screen and (min-width: 1280px){
     aside{
         z-index: 1 !important;
-        margin-left: 30px !important;
         opacity: 1 !important;
+        position: static !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
