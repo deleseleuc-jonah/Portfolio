@@ -38,7 +38,7 @@
 }
 @media screen and (min-width: 1280px){
     .banner{
-        height: 445px;
+        height: calc(100vh - 79px);
         h1{
             font-size: 48px;
         }

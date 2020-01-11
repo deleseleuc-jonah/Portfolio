@@ -7,6 +7,7 @@ aside{
     text-align: center;
     transition: opacity 0.3s ease-in-out;
     @include anchor-reset;
+    overflow-x: hidden;
 
 }
 .sales-box, .sales{
@@ -31,13 +32,7 @@ aside{
         border-radius: 25px;
         color: rgba(0, 0, 0, 1);
         a{
-            @include centered-flex;
-            margin-left: 18px;
-            margin-right: auto;
             line-height: 21px;
-        }
-        span{
-            margin: 2px 5px 0 0;
         }
     }
 }

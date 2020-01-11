@@ -100,8 +100,8 @@ a, button{
     cursor: pointer;
 }
 .openapp:hover{
-    text-decoration: underline;
-    color: $quinary;
+    text-decoration: underline !important;
+    color: $quinary !important;
 }
 //Mobile Dropdown menu///
 .drop{

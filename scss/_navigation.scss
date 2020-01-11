@@ -160,7 +160,7 @@ $anchor-close-s: 200ms ease-in-out;
 .m-nav{
     width: 100%;
     box-sizing: border-box;
-    padding: 8px 15px 0 15px;
+    padding: 20px 10px;
 	top: 100%; left: 0;
     position: absolute;
     text-align: left;
@@ -174,7 +174,7 @@ $anchor-close-s: 200ms ease-in-out;
         transition: opacity $anchor-open-s ease-in-out;
 	}
     .drop{
-        margin-top: 14px;
+        margin-top: 16px;
         font-size: 14px;
     }
     .drop.open ~ .drop-first{
@@ -191,6 +191,9 @@ $anchor-close-s: 200ms ease-in-out;
     }
     .drop-second{
         font-size: 16px;
+    }
+    a.drop:first-of-type{
+        margin-top: 0 !important;
     }
 }
 .nav-img{

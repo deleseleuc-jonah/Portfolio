@@ -89,6 +89,7 @@ $d-row-s: opacity 0.6s ease-in;
         width: 290px;
         opacity: 0;
         border-radius: 5px;
+        overflow: hidden;
         img{
             @include spacing-reset;
             display: block;
@@ -139,7 +140,7 @@ input:checked + figure{
     .products{
         padding: 1px 30px 70px 30px !important;
         h1{
-            height: 100px;
+            height: 80px;
             font-size: 24px;
         }
     }

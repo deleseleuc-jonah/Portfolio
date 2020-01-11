@@ -35,8 +35,8 @@ a, button {
 }
 
 .openapp:hover {
-  text-decoration: underline;
-  color: #8fae50;
+  text-decoration: underline !important;
+  color: #8fae50 !important;
 }
 
 .drop {
@@ -130,33 +130,30 @@ header .big-icon img {
   height: 100%;
   margin-right: 1em;
 }
+header .heading {
+  display: inline-flex !important;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  color: #60795a;
+}
+header .heading h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #011746;
+}
 header a:link, header a:visited, header a:hover, header a:active {
   color: inherit;
   text-decoration: none;
-}
-header .heading {
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
   header {
     height: 79px;
-  }
-  header .heading {
-    display: inline-flex !important;
-    display: -webkit-flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    color: #60795a;
-  }
-  header .heading h1 {
-    font-size: 32px;
-    font-weight: 800;
-    color: #011746;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -310,7 +307,7 @@ header .heading {
 .m-nav {
   width: 100%;
   box-sizing: border-box;
-  padding: 8px 15px 0 15px;
+  padding: 20px 10px;
   top: 100%;
   left: 0;
   position: absolute;
@@ -333,7 +330,7 @@ header .heading {
   transition: opacity 0.5s ease-in-out ease-in-out;
 }
 .m-nav .drop {
-  margin-top: 14px;
+  margin-top: 16px;
   font-size: 14px;
 }
 .m-nav .drop.open ~ .drop-first {
@@ -350,6 +347,9 @@ header .heading {
 }
 .m-nav .drop-second {
   font-size: 16px;
+}
+.m-nav a.drop:first-of-type {
+  margin-top: 0 !important;
 }
 
 .nav-img {

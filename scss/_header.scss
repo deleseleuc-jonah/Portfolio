@@ -23,29 +23,27 @@ header{
            height: 100%;
            margin-right: 1em;
         }
-	}
-    @include anchor-reset;
-    .heading{
-        display: none;
     }
+    .heading{
+        display: inline-flex !important;
+        @include centered-flex;
+        flex-direction: column;
+        height: 100%;
+        font-size: 18px;
+        font-weight: 400;
+        color: $septenary;
+        h1{
+            font-size: 32px;
+            font-weight: 800;
+            color: $nonary;
+        }
+    }
+    @include anchor-reset;
+
 }
 @media screen and (min-width:768px){
     header{
         height: 79px;
-        .heading{
-            display: inline-flex !important;
-            @include centered-flex;
-            flex-direction: column;
-            height: 100%;
-            font-size: 18px;
-            font-weight: 400;
-            color: $septenary;
-            h1{
-                font-size: 32px;
-                font-weight: 800;
-                color: $nonary;
-            }
-        }
     }
 }
 @media screen and (min-width: 1280px){
