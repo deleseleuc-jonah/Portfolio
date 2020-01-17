@@ -96,7 +96,8 @@ body {
 }
 
 header {
-  height: 62px;
+  height: 10vh;
+  min-height: 60px;
   width: 100%;
   display: -webkit-flex;
   align-items: center;
@@ -153,7 +154,7 @@ header a:link, header a:visited, header a:hover, header a:active {
 
 @media screen and (min-width: 768px) {
   header {
-    height: 79px;
+    height: 15vh;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -596,6 +597,8 @@ footer {
   font-family: "Lato";
   font-size: 13px !important;
   font-weight: 400;
+  box-sizing: border-box;
+  padding: 2.5%;
 }
 footer section, footer ul {
   margin: 0;
@@ -607,13 +610,16 @@ footer a:link, footer a:visited, footer a:hover, footer a:active {
 }
 footer .m-fig {
   padding: 0;
-  margin: 45px auto;
+  margin: 0 auto;
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
+  height: 10%;
   width: 100%;
   font-size: 30px;
   background: white;
+  bottom: 0;
+  left: 0;
 }
 footer .m-fig img {
   height: 30px;
@@ -621,7 +627,6 @@ footer .m-fig img {
 
 .foot-nav {
   box-sizing: border-box;
-  padding: 20px 15px 0 15px;
 }
 .foot-nav a.drop {
   font-weight: 500;
@@ -671,6 +676,10 @@ footer .m-fig img {
 }
 
 @media screen and (min-width: 1280px) {
+  footer {
+    height: 40vh;
+    min-height: 330px;
+  }
   footer .drop {
     margin: 0 0 30px 0 !important;
     display: block;
@@ -681,14 +690,8 @@ footer .m-fig img {
     display: none;
   }
 
-  footer,
-.foot-nav {
-    height: 250px;
-  }
-
   .foot-nav {
-    box-sizing: border-box;
-    padding: 0 55px;
+    height: 10%;
   }
 
   .m-fig,
@@ -697,13 +700,12 @@ footer .m-fig img {
   }
 
   .d-wrap {
-    height: 300px;
+    height: 90%;
   }
 
   .d-wrap,
 .d-fig {
     display: inline-flex !important;
-    padding-top: 45px;
   }
 
   .d-fig {

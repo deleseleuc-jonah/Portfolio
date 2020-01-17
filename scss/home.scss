@@ -13,8 +13,9 @@ $slider3: "../files/osakacastle.jpg";
 
 @media screen and (min-width: 768px){
     .home-wrap{
+        height: calc(100vh - #{$header-desktop});
         width: 90%;
         display: flex;
-        margin: 0 auto;
+        margin: $header-desktop auto 0 auto;
     }
 }

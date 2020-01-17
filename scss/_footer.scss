@@ -5,17 +5,22 @@ footer{
     font-family: $lato;
     font-size: 13px !important;
     font-weight: 400;
+    box-sizing: border-box;
+    padding: 2.5%;
     section, ul{
         @include spacing-reset;
     }
     @include anchor-reset;
     .m-fig{
         padding: 0;
-        margin: 45px auto;
+        margin: 0 auto;
         @include centered-flex;
+        height: 10%;
         width: 100%;
         font-size: 30px;
         background: $primary;
+        bottom: 0;
+        left: 0;
         img{
             height: 30px;
         }
@@ -23,7 +28,6 @@ footer{
 }
 .foot-nav{
     box-sizing: border-box;
-    padding: 20px 15px 0 15px;
     a.drop{
         font-weight: 500;
         margin: 14px 0;
@@ -57,6 +61,8 @@ footer{
 }
 @media screen and (min-width: 1280px){
     footer{
+        height: 40vh;
+        min-height: 330px;
         .drop{
             margin: 0 0 30px 0 !important;
             display: block; 
@@ -67,25 +73,19 @@ footer{
             }
         }
     }
-    footer,
     .foot-nav{
-     height: 250px;   
-    }
-    .foot-nav{
-        box-sizing: border-box;
-        padding: 0 55px;
+     height: 10%;   
     }
     .m-fig,
     .bottom-icons{
         display: none;
     }
     .d-wrap{
-        height: 300px;
+        height: 90%;
     }
     .d-wrap,
     .d-fig{
         display: inline-flex !important;
-        padding-top: 45px;
     }
     .d-fig{
         margin-top: 0;

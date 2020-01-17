@@ -47,8 +47,10 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 
 .slider{
 	display: block;
-	margin: 79px auto 17px auto;
-    height: calc(100vh - 96px);
+    margin: $header-mobile auto 0 auto;
+    padding: 2vh 0;
+    box-sizing: border-box;
+    height: calc(100vh - #{$header-mobile});
 	width: 90%;
 	input{
 		opacity: 0;
@@ -60,7 +62,8 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 }
 .slider-box{
 	position: relative;
-    @include full-dimensions;
+    min-height: 100%;
+    width: 100%;
 	border-radius: 5px;
 	overflow: hidden;
 }
@@ -168,11 +171,10 @@ $p-timing: opacity 0.8s 1.5s ease-in;
         max-width: 100%;
     }
     .slider{
-        display: inline-block;
-        margin-top: 96px;
-        margin-left: 30px;
+        display: block;
+        margin: 0 auto;
         max-width: 100%;
-        height: calc(100vh - 115px);
+        height: calc(100vh - #{$header-desktop});
     }
 	.content-p{
 		max-width: 328px;

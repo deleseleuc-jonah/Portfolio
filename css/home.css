@@ -92,7 +92,8 @@ a, button {
   }
 }
 header {
-  height: 62px;
+  height: 10vh;
+  min-height: 60px;
   width: 100%;
   display: -webkit-flex;
   align-items: center;
@@ -149,7 +150,7 @@ header a:link, header a:visited, header a:hover, header a:active {
 
 @media screen and (min-width: 768px) {
   header {
-    height: 79px;
+    height: 15vh;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -443,8 +444,10 @@ header a:link, header a:visited, header a:hover, header a:active {
 }
 .slider {
   display: block;
-  margin: 79px auto 17px auto;
-  height: calc(100vh - 96px);
+  margin: 10vh auto 0 auto;
+  padding: 2vh 0;
+  box-sizing: border-box;
+  height: calc(100vh - 10vh);
   width: 90%;
 }
 .slider input {
@@ -460,7 +463,7 @@ header a:link, header a:visited, header a:hover, header a:active {
 
 .slider-box {
   position: relative;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   border-radius: 5px;
   overflow: hidden;
@@ -625,11 +628,10 @@ header a:link, header a:visited, header a:hover, header a:active {
   }
 
   .slider {
-    display: inline-block;
-    margin-top: 96px;
-    margin-left: 30px;
+    display: block;
+    margin: 0 auto;
     max-width: 100%;
-    height: calc(100vh - 115px);
+    height: calc(100vh - 15vh);
   }
 
   .content-p {
@@ -688,7 +690,7 @@ header a:link, header a:visited, header a:hover, header a:active {
 }
 aside {
   position: absolute;
-  margin: 96px 0 0 30px;
+  margin: 0 0 0 30px;
   z-index: -1;
   opacity: 0;
   display: inline-block;
@@ -844,7 +846,7 @@ aside img {
 }
 @media screen and (min-width: 1280px) {
   .banner {
-    height: calc(100vh - 79px);
+    height: calc(80vh - 15vh);
   }
   .banner h1 {
     font-size: 48px;
@@ -854,6 +856,8 @@ aside img {
   }
 }
 .products {
+  height: calc(100vh - 10vh);
+  min-height: 500px;
   position: relative;
   background: #262a33;
   box-sizing: border-box;
@@ -951,7 +955,7 @@ aside img {
 .product-nav {
   position: absolute;
   height: 72px;
-  bottom: -19%;
+  bottom: -15%;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -990,6 +994,7 @@ input:checked + figure {
 
 @media screen and (min-width: 768px) {
   .products {
+    height: calc(100vh - 15vh);
     padding: 1px 30px 70px 30px !important;
   }
   .products h1 {
@@ -1220,7 +1225,8 @@ a, button {
 
 @media screen and (min-width: 768px) {
   .services {
-    height: 200px;
+    height: 20vh;
+    min-height: 200px;
     width: 100vwh;
     padding-top: 50px;
     flex-direction: row;
@@ -1244,6 +1250,8 @@ footer {
   font-family: "Lato";
   font-size: 13px !important;
   font-weight: 400;
+  box-sizing: border-box;
+  padding: 2.5%;
 }
 footer section, footer ul {
   margin: 0;
@@ -1255,13 +1263,16 @@ footer a:link, footer a:visited, footer a:hover, footer a:active {
 }
 footer .m-fig {
   padding: 0;
-  margin: 45px auto;
+  margin: 0 auto;
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
+  height: 10%;
   width: 100%;
   font-size: 30px;
   background: white;
+  bottom: 0;
+  left: 0;
 }
 footer .m-fig img {
   height: 30px;
@@ -1269,7 +1280,6 @@ footer .m-fig img {
 
 .foot-nav {
   box-sizing: border-box;
-  padding: 20px 15px 0 15px;
 }
 .foot-nav a.drop {
   font-weight: 500;
@@ -1319,6 +1329,10 @@ footer .m-fig img {
 }
 
 @media screen and (min-width: 1280px) {
+  footer {
+    height: 40vh;
+    min-height: 330px;
+  }
   footer .drop {
     margin: 0 0 30px 0 !important;
     display: block;
@@ -1329,14 +1343,8 @@ footer .m-fig img {
     display: none;
   }
 
-  footer,
-.foot-nav {
-    height: 250px;
-  }
-
   .foot-nav {
-    box-sizing: border-box;
-    padding: 0 55px;
+    height: 10%;
   }
 
   .m-fig,
@@ -1345,13 +1353,12 @@ footer .m-fig img {
   }
 
   .d-wrap {
-    height: 300px;
+    height: 90%;
   }
 
   .d-wrap,
 .d-fig {
     display: inline-flex !important;
-    padding-top: 45px;
   }
 
   .d-fig {
@@ -1404,9 +1411,10 @@ footer .m-fig img {
 }
 @media screen and (min-width: 768px) {
   .home-wrap {
+    height: calc(100vh - 15vh);
     width: 90%;
     display: flex;
-    margin: 0 auto;
+    margin: 15vh auto 0 auto;
   }
 }
 

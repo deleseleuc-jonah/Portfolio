@@ -30,6 +30,8 @@ $d-row-s: opacity 0.6s ease-in;
 }
 //Structure
 .products{
+    height: calc(100vh - #{$header-mobile});
+    min-height: 500px;
     position: relative;
     background: $secondary;
     @include anchor-reset;
@@ -104,7 +106,7 @@ $d-row-s: opacity 0.6s ease-in;
 .product-nav{
     position: absolute;
     height: 72px;
-    bottom: -19%; left: 50%;
+    bottom: -15%; left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 	@include centered-flex;
@@ -138,6 +140,7 @@ input:checked + figure{
 
 @media screen and (min-width: 768px){
     .products{
+        height: calc(100vh - #{$header-desktop});
         padding: 1px 30px 70px 30px !important;
         h1{
             height: 80px;

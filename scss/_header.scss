@@ -1,5 +1,6 @@
 header{
-    height: 62px;
+    height: $header-mobile;
+    min-height: 60px;
     width: 100%;
     @include centered-flex;
 	position: fixed;
@@ -43,7 +44,7 @@ header{
 }
 @media screen and (min-width:768px){
     header{
-        height: 79px;
+        height: $header-desktop;
     }
 }
 @media screen and (min-width: 1280px){
