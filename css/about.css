@@ -172,9 +172,6 @@ header a:link, header a:visited, header a:hover, header a:active {
 .d-nav li {
   margin-right: 26px;
 }
-.d-nav li:nth-child(1) {
-  margin-right: 0;
-}
 .d-nav li:nth-last-child(1) {
   margin-right: 0;
 }
@@ -248,6 +245,44 @@ header a:link, header a:visited, header a:hover, header a:active {
   left: 0;
   background: #262a33;
   color: white;
+}
+
+.d-nav li > a {
+  padding: 15px;
+}
+
+.language-bar {
+  position: relative;
+  text-align: center;
+}
+.language-bar a {
+  padding: 15px;
+}
+.language-bar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+.language-bar div {
+  position: absolute;
+  opacity: 0;
+}
+.language-bar div a {
+  display: block;
+  color: white;
+}
+.language-bar div a:hover {
+  color: black;
+}
+
+.language-bar > a {
+  width: 70px;
+  display: inline-block;
+}
+
+.language-bar:hover div {
+  opacity: 1;
+  background: #262a33;
+  width: 100%;
 }
 
 .top-icons {
@@ -345,7 +380,7 @@ header a:link, header a:visited, header a:hover, header a:active {
 .m-nav .drop-second {
   font-size: 16px;
 }
-.m-nav a.drop:first-of-type {
+.m-nav li:first-of-type .drop {
   margin-top: 0 !important;
 }
 
