@@ -477,14 +477,18 @@ header a:link, header a:visited, header a:hover, header a:active {
     display: none;
   }
 }
+body {
+  background-color: #f0ece9 !important;
+}
+
 .backdrop {
-  height: calc(100% - 15vh);
+  height: calc(100% - 62px);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 15vh 0 0 0;
+  margin: 62px 0 0 0;
   padding: 0px;
   background-size: cover;
   background-image: url(../files/images/castle.jpg);
@@ -503,7 +507,7 @@ header a:link, header a:visited, header a:hover, header a:active {
   z-index: 1;
   bottom: -26px;
   display: block;
-  content: "About Me";
+  content: "About";
   transform: scaleY(-1);
   color: rgba(255, 255, 255, 0.2);
 }
@@ -511,7 +515,6 @@ header a:link, header a:visited, header a:hover, header a:active {
 .directory {
   width: 100%;
   display: block;
-  background: #f0ece9;
   padding: 1em;
   box-sizing: border-box;
 }
@@ -522,7 +525,7 @@ header a:link, header a:visited, header a:hover, header a:active {
   margin: 0 auto 1% auto;
   padding: 3% 3%;
   box-sizing: border-box;
-  background: white;
+  background-color: white;
 }
 .directory h1 {
   font-size: 24px;
@@ -544,6 +547,7 @@ header a:link, header a:visited, header a:hover, header a:active {
   grid-template-columns: 1fr 1fr;
   margin: 0 auto 5% auto;
   padding: 0;
+  background-color: white;
 }
 .insta-rows img {
   width: 100%;
