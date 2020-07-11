@@ -61,11 +61,8 @@ $d-row-s: opacity 0.6s ease-in;
     h1::after {
         content: '';
         border-top: 3px solid $prod-b;
-        margin: 0 20px 0 0;
+        margin: 0 20px 0 20px;
         flex: 1 0 20px;
-    }
-   h1::after {
-        margin: 0 0 0 20px;
     }
 }
 .products-row{

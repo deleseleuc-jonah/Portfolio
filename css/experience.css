@@ -477,120 +477,6 @@ header a:link, header a:visited, header a:hover, header a:active {
     display: none;
   }
 }
-body {
-  background-color: #f0ece9 !important;
-}
-
-.backdrop {
-  height: calc(100% - 62px);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 62px 0 0 0;
-  padding: 0px;
-  background-size: cover;
-  background-image: url(../files/images/castle.jpg);
-  background-position: bottom;
-}
-.backdrop h1 {
-  color: white;
-  font-size: 60px;
-  display: block;
-  letter-spacing: 0.1em;
-  margin-top: auto;
-  font-size: 70px;
-}
-.backdrop h1::after {
-  position: relative;
-  z-index: 1;
-  bottom: -26px;
-  display: block;
-  content: "About Me";
-  transform: scaleY(-1);
-  color: rgba(255, 255, 255, 0.2);
-}
-
-.directory {
-  width: 100%;
-  display: block;
-  padding: 1em;
-  box-sizing: border-box;
-}
-.directory p {
-  font-size: 18px;
-  width: 66%;
-  border-radius: 5px;
-  margin: 0 auto 1% auto;
-  padding: 3% 3%;
-  box-sizing: border-box;
-  background-color: white;
-}
-.directory h1 {
-  font-size: 24px;
-  height: 50px;
-  margin: 0 auto !important;
-  max-width: 66%;
-  display: -webkit-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 800;
-  color: #45413e;
-}
-
-.insta-rows {
-  width: 66%;
-  display: grid;
-  grid-gap: 28px;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto 5% auto;
-  padding: 0;
-  background-color: white;
-}
-.insta-rows img {
-  width: 100%;
-  height: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .backdrop h1 {
-    font-size: 85px;
-  }
-
-  .disable-transparency {
-    height: 79px;
-  }
-
-  .backdrop {
-    min-height: calc(100% - 79px);
-  }
-
-  .insta-rows {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .directory h1 {
-    margin: 2.5% 0;
-  }
-  .directory h1::before,
-.directory h1::after {
-    content: "";
-    border-top: 3px solid;
-    margin: 0 20px 0 0;
-    flex: 1 0 20px;
-    color: #45413e;
-  }
-  .directory h1::after {
-    margin: 0 0 0 20px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .backdrop h1 {
-    font-size: 100px;
-  }
-}
 footer {
   background-color: white;
   color: #262a33;
@@ -757,5 +643,108 @@ footer .m-fig img {
     margin-top: 53px;
   }
 }
+body {
+  background: #262a33;
+}
 
-/*# sourceMappingURL=about.css.map */
+.left-column p, .right-column p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.wrapper {
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  align-items: initial;
+  margin-top: 15vh;
+  padding: 2em;
+}
+.wrapper section {
+  background: white;
+  padding: 2em;
+  box-sizing: border-box;
+  margin-bottom: 2em;
+}
+.wrapper h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.wrapper h2, .wrapper h3 {
+  font-weight: 300;
+}
+
+.profile {
+  height: 30vh;
+  width: 100%;
+  margin: 0 auto 2em 0;
+  padding: 2em;
+  box-sizing: border-box;
+  background: white;
+}
+
+.left-column {
+  width: 66%;
+  margin: 0 2em 0 0;
+}
+.left-column section {
+  height: 50vh;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-column section {
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-column section p, .left-column section div {
+  width: 66%;
+  height: 100%;
+}
+.left-column section p {
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  padding: 0 0 0 5em;
+}
+
+.right-column {
+  width: 33%;
+}
+
+.underline {
+  border-bottom: 1px solid #aaa;
+}
+
+.osf {
+  background-image: url(../files/osf.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.repair {
+  background-image: url(../files/ubif.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 66%;
+}
+
+.repair + p {
+  padding: 0 5em 0 0 !important;
+}
+
+.cmp {
+  background-image: url(../files/cmp.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+/*# sourceMappingURL=experience.css.map */
