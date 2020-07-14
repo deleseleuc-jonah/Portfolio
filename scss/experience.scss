@@ -5,19 +5,27 @@
 body{
     background: $secondary;
 }
+
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 15vh 5%;
+    section, .profile{
+        background: $primary;
+    }
+
+}
 .left-column, .right-column{
     p{
         font-size: 18px;
         font-weight: 300;
     }
-}
+ }
 .wrapper{
-    @include centered-flex;
-    align-items: initial;
     margin-top: 15vh;
     padding: 2em;
     section{
-        background: $primary;
         padding: 2em;
         box-sizing: border-box;
         margin-bottom: 2em;
@@ -38,10 +46,8 @@ body{
     margin: 0 auto 2em 0;
     padding: 2em;
     box-sizing: border-box;
-    background: white;
 }
 .left-column{
-    width: 66%;
     margin: 0 2em 0 0;
     section{
         height: 50vh;
@@ -50,9 +56,6 @@ body{
 }
 .left-column section{
     @include centered-flex;
-    p, div{
-        width: 66%; height: 100%;
-    }
     p{
         @include centered-flex;
         text-align: center;
@@ -60,8 +63,23 @@ body{
         padding: 0 0 0 5em;
     }
 }
-.right-column{
-    width: 33%;
+    @media screen and (min-width: 768px){
+        
+}
+
+@media screen and (min-width: 1280px){
+    .wrapper{
+        @include centered-flex;
+        align-items: initial;
+    }
+    .left-column section{
+        p, div{
+            width: 66%; height: 100%;
+        }
+    }
+    .right-column{
+        width: 33% !important;
+    }
 }
 .underline{
     border-bottom: 1px solid #aaa;
