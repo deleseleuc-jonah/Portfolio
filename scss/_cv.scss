@@ -1,0 +1,102 @@
+body{
+    background: $secondary;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    margin-top: 10vh;
+    padding: 2em;
+    box-sizing: border-box;
+    section, .profile{
+        background: $primary;
+    }
+    section{
+        padding: 2em;
+        box-sizing: border-box;
+        margin-bottom: 2em;
+    }
+    h1{
+        @include spacing-reset;
+        font-size: 26px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    h2, h3{
+        font-weight: 300;
+    }
+
+}
+.left-column, .right-column{
+    p{
+        font-weight: 300;
+    }
+ }
+.profile{
+    width: 100%;
+    margin: 0 auto 2em 0;
+    padding: 2em;
+    box-sizing: border-box;
+}
+.left-column{
+    margin: 0;
+    section{
+        height: 50vh;
+        @include centered-flex;
+    }
+}
+.left-column section{
+    @include centered-flex;
+    p{
+        @include centered-flex;
+        text-align: center;
+        width: 50%;
+        padding: 0 0 0 5em;
+    }
+}
+    @media screen and (min-width: 768px){
+      .wrapper{
+          margin-top: 15vh;
+      }
+}
+
+@media screen and (min-width: 1280px){
+    .wrapper{
+        @include centered-flex;
+        align-items: initial;
+    }
+    .left-column section{
+        p, div{
+            width: 66%; height: 100%;
+        }
+    }
+    .left-column{
+        margin-right: 2em;
+      } 
+    .right-column{
+        width: 33% !important;
+    }
+}
+.underline{
+    border-bottom: 1px solid #aaa;
+}
+.osf{
+    background-image: url(../files/osf.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.repair{
+    background-image: url(../files/ubif.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 66%;
+}
+.repair + p{
+    padding: 0 5em 0 0 !important;
+}
+.cmp{
+    background-image: url(../files/cmp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}

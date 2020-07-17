@@ -78,7 +78,6 @@ html, body{
     overflow-x: hidden;
 	position: relative;
     scroll-behavior: smooth;
-	font-size: 16px;
 	font-family: $third-font;
     font-family: $second-font;
     font-family: $main-font;
@@ -144,11 +143,11 @@ a, button{
 }
 @media screen and (min-width: 768px){
 	html{
-		font-size: 18px;
+		font-size: 20px;
 	}
 }
 @media screen and (min-width: 1200px){
 	html{
-		font-size: 20px;
+		font-size: 22px;
 	}
 }
