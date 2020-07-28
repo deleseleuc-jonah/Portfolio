@@ -172,7 +172,7 @@ header a:link, header a:visited, header a:hover, header a:active {
   margin-right: 26px;
 }
 .d-nav li:nth-last-child(1) {
-  margin-right: 0;
+  margin-right: 55px;
 }
 .d-nav a {
   margin-right: auto;
@@ -601,7 +601,7 @@ header a:link, header a:visited, header a:hover, header a:active {
   max-width: 878px;
   height: 1rem;
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
@@ -657,69 +657,54 @@ header a:link, header a:visited, header a:hover, header a:active {
     width: 100%;
   }
 
-  .slider-box {
-    max-width: 100%;
-  }
-
   .slider {
     display: block;
-    margin: 0 auto;
-    max-width: 100%;
     height: calc(100vh - 15vh);
+    margin-top: 15vh;
+  }
+
+  .slide-nav {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .content-p, .content-h, .content-p + button {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .content-p {
-    max-width: 328px;
-    margin-top: 110px;
-    margin-left: 60px;
+    margin-top: 150px;
+    text-align: center;
   }
 
   .content-h {
-    margin-top: 77px;
-    font-size: 48px;
-    margin-left: 60px;
+    width: 100%;
+    text-align: center;
   }
 
   .content-p + button {
-    margin-top: 50px;
-    margin-left: 60px;
-    margin-bottom: 100px;
-  }
-
-  #second {
-    text-align: center;
-  }
-  #second .content-h {
-    margin-right: 60px;
-  }
-  #second .content-p {
-    margin: 100px auto 0 auto;
-  }
-  #second .content-p + button {
-    margin: 50px auto 100px auto;
-  }
-
-  #third {
-    text-align: right;
-  }
-  #third .content-h, #third .content-p,
-#third .content-p + button {
-    margin-right: 60px;
-  }
-  #third .content-p {
-    float: right;
-  }
-  #third .content-p + button {
-    clear: both;
-    float: right;
-    margin: 50px 60px 100px 0;
+    margin-top: 250px;
   }
 }
 @media screen and (min-width: 1280px) {
   .slider {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 70%;
+    width: 100vw;
+    padding: 0;
+  }
+
+  .slider-box, .slide {
+    border-radius: 0;
+  }
+
+  .content-p {
+    font-size: 16px;
+  }
+
+  .content-h {
+    font-size: 60px;
   }
 }
 aside {
@@ -890,8 +875,7 @@ aside img {
   }
 }
 .products {
-  height: calc(100vh - 10vh);
-  min-height: 580px !important;
+  height: 520px;
   position: relative;
   background: #262a33;
   box-sizing: border-box;
@@ -944,6 +928,7 @@ aside img {
   justify-content: space-between;
   position: relative;
   height: 376px;
+  width: 90%;
   margin: 0 auto;
   transition: opacity 0.6s ease-in;
   -moz-transition: opacity 0.6s ease-in;
@@ -1025,7 +1010,7 @@ input:checked + figure {
 
 @media screen and (min-width: 768px) {
   .products {
-    height: calc(100vh - 15vh);
+    height: 525px;
     padding: 1px 30px 70px 30px !important;
   }
   .products h1 {
@@ -1035,10 +1020,14 @@ input:checked + figure {
 }
 @media screen and (min-width: 1280px) {
   .products {
+    height: 600px;
     padding: 1px 55px 70px 55px !important;
   }
   .products h1 {
     height: 155px;
+  }
+  .products .products-row {
+    max-width: 1300px;
   }
 
   .products-row figure {
@@ -1103,6 +1092,7 @@ input:checked + figure {
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
+  font-size: 15px;
 }
 
 /*Global SCSS*/
@@ -1441,9 +1431,15 @@ footer .m-fig img {
 @media screen and (min-width: 768px) {
   .home-wrap {
     height: calc(100vh - 15vh);
+    max-height: 600px;
     width: 90%;
     display: flex;
     margin: 15vh auto 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .home-wrap {
+    min-height: 100vh;
   }
 }
 

@@ -176,7 +176,7 @@ header a:link, header a:visited, header a:hover, header a:active {
   margin-right: 26px;
 }
 .d-nav li:nth-last-child(1) {
-  margin-right: 0;
+  margin-right: 55px;
 }
 .d-nav a {
   margin-right: auto;

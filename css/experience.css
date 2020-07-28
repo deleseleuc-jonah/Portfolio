@@ -172,7 +172,7 @@ header a:link, header a:visited, header a:hover, header a:active {
   margin-right: 26px;
 }
 .d-nav li:nth-last-child(1) {
-  margin-right: 0;
+  margin-right: 55px;
 }
 .d-nav a {
   margin-right: auto;
@@ -479,6 +479,9 @@ header a:link, header a:visited, header a:hover, header a:active {
 body {
   background: #262a33;
 }
+body p, body section, body div {
+  font-weight: 300;
+}
 
 .wrapper {
   width: 100%;
@@ -506,10 +509,6 @@ body {
   font-weight: 300;
 }
 
-.left-column p, .right-column p {
-  font-weight: 300;
-}
-
 .profile {
   width: 100%;
   margin: 0 auto 2em 0;
@@ -525,6 +524,10 @@ body {
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
+}
+.left-column section p, .left-column section div {
+  width: 66%;
+  height: 100%;
 }
 
 .left-column section {
@@ -552,11 +555,6 @@ body {
     align-items: center;
     justify-content: center;
     align-items: initial;
-  }
-
-  .left-column section p, .left-column section div {
-    width: 66%;
-    height: 100%;
   }
 
   .left-column {

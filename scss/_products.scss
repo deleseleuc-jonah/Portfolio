@@ -29,8 +29,7 @@ $d-row-s: opacity 0.6s ease-in;
 }
 //Structure
 .products{
-    height: calc(100vh - #{$header-mobile});
-    min-height: 580px !important;
+    height: 520px;
     position: relative;
     background: $secondary;
     @include anchor-reset;
@@ -70,6 +69,7 @@ $d-row-s: opacity 0.6s ease-in;
     justify-content: space-between;
     position: relative;
     height: 376px;
+    width: 90%;
     margin: 0 auto;
     @include d-row-transition;
     text-align: center;
@@ -136,7 +136,7 @@ input:checked + figure{
 
 @media screen and (min-width: 768px){
     .products{
-        height: calc(100vh - #{$header-desktop});
+        height: 525px;
         padding: 1px 30px 70px 30px !important;
         h1{
             height: 80px;
@@ -146,9 +146,13 @@ input:checked + figure{
 }
 @media screen and (min-width: 1280px){
     .products{
+        height: 600px;
         padding: 1px 55px 70px 55px !important;
         h1{
             height: 155px;
+        }
+        .products-row{
+            max-width: 1300px;
         }
     }
     .products-row{
@@ -202,4 +206,5 @@ input:checked + figure{
     @include tile-details;
     @include spacing-reset;
     @include centered-flex;
+    font-size: 15px;
 }

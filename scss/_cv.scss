@@ -1,5 +1,8 @@
 body{
     background: $secondary;
+    p, section, div{
+        font-weight: 300;
+    }
 }
 
 .wrapper{
@@ -27,11 +30,6 @@ body{
     }
 
 }
-.left-column, .right-column{
-    p{
-        font-weight: 300;
-    }
- }
 .profile{
     width: 100%;
     margin: 0 auto 2em 0;
@@ -43,6 +41,9 @@ body{
     section{
         height: 50vh;
         @include centered-flex;
+        p, div{
+            width: 66%; height: 100%;
+        }
     }
 }
 .left-column section{
@@ -64,11 +65,6 @@ body{
     .wrapper{
         @include centered-flex;
         align-items: initial;
-    }
-    .left-column section{
-        p, div{
-            width: 66%; height: 100%;
-        }
     }
     .left-column{
         margin-right: 2em;
