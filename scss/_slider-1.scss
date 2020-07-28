@@ -91,16 +91,16 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 	border-radius: 5px;
 	color: $primary;
 }
+.content-p, .content-h, .content-p + button{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
 .content-p,
 .content-p + button{
     @include p-checked;
     opacity: 0;
-    margin-left: 15px;
-}
-.content-h{
-    @include h-checked;
-    opacity: 0;
-    margin-left: 15px;
 }
 .content-p,
 .content-p + button{
@@ -110,7 +110,7 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 .content-p + button{
     height: 38px;
     display: block;
-    margin: 60px auto 68px auto; 
+    margin-top: 200px; 
     padding: 12px 34px;
     border: solid 1px $primary;
     border-radius: 25px;
@@ -118,26 +118,38 @@ $p-timing: opacity 0.8s 1.5s ease-in;
     font-weight: 100;
     line-height: 0px;
     text-transform: uppercase;
-    background: transparent;
+    background: rgba(0,0,0, 0.4);
+}
+.content-p, .content-h{
+    text-align: center;
+    width: 100%;
+    @include spacing-reset;
+    padding: 0 5%;
+    box-sizing: border-box;
 }
 .content-p{
-    margin: 52px 15px 0 15px;
+    margin-top: 100px;
 }
 .content-h{
-    margin: 35px 15px 0 15px;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 700;
+    @include h-checked;
+    opacity: 0;
 }
 //Nav Dots//
 
 .slide-nav{
-	width: 100%;
-    max-width: 878px;
-	height: 1rem;
+	width: 90px;
+	height: 25px;
 	position: absolute;
-	bottom: 10%;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 	@include centered-flex;
-	z-index: 99;
+    z-index: 99;
+    background: rgba(0,0,0, 0.4);
+    border-radius: 25px;
+    border: solid 1px $primary;
 }
 @include dots;
 .dots:hover{
@@ -174,26 +186,21 @@ $p-timing: opacity 0.8s 1.5s ease-in;
         height: calc(100vh - #{$header-desktop});
         margin-top: $header-desktop;
     }
-    .slide-nav{
-        left: 50%;
-        transform: translate(-50%, -50%); 
-    }
-    .content-p, .content-h, .content-p + button{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
-    }
+    .content-p,
+    .content-p + button{
+        font-size: 16px;
+        color: $primary;
+    }   
 	.content-p{
-        margin-top: 150px;
-        text-align: center;
-	}
-    .content-h{
-        width: 100%;
-        text-align: center;
+        width: 50%;
+        margin-top: 125px;
     }
-   .content-p + button{
-        margin-top: 250px;
+    .content-p + button{
+        margin-top: 225px;
+    }
+    .content-h{
+        font-size: 50px;
+        width: 100%;
     }
 }
 @media screen and (min-width: 1280px){
@@ -205,7 +212,7 @@ $p-timing: opacity 0.8s 1.5s ease-in;
         border-radius: 0;
     }
     .content-p{
-        font-size: 16px;    
+        font-size: 18px;
     }
     .content-h{
         font-size: 60px;
