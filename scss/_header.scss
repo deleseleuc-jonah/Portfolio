@@ -49,9 +49,14 @@ header{
 }
 @media screen and (min-width: 1280px){
     header{
+        opacity: 0;
+        transition: opacity ease-in 0.3s;
         .big-icon{
             margin-right: auto;
             margin-left: 55px;
         }
+    }
+    header:hover{
+       opacity: 100%;
     }
 }

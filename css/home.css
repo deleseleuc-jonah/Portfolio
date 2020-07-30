@@ -153,9 +153,17 @@ header a:link, header a:visited, header a:hover, header a:active {
   }
 }
 @media screen and (min-width: 1280px) {
+  header {
+    opacity: 0;
+    transition: opacity ease-in 0.3s;
+  }
   header .big-icon {
     margin-right: auto;
     margin-left: 55px;
+  }
+
+  header:hover {
+    opacity: 100%;
   }
 }
 .d-nav {
@@ -610,7 +618,7 @@ header a:link, header a:visited, header a:hover, header a:active {
   width: 90px;
   height: 30px;
   position: absolute;
-  bottom: 10%;
+  bottom: 1%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: -webkit-flex;
@@ -700,6 +708,8 @@ header a:link, header a:visited, header a:hover, header a:active {
   .slider {
     width: 100vw;
     padding: 0;
+    margin-top: 0;
+    height: 100vh;
   }
 
   .slider-box, .slide {
