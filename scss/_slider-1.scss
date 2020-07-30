@@ -140,7 +140,7 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 
 .slide-nav{
 	width: 90px;
-	height: 25px;
+	height: 30px;
 	position: absolute;
     bottom: 10%;
     left: 50%;
@@ -148,8 +148,7 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 	@include centered-flex;
     z-index: 99;
     background: rgba(0,0,0, 0.4);
-    border-radius: 25px;
-    border: solid 1px $primary;
+    border-radius: 15px;
 }
 @include dots;
 .dots:hover{

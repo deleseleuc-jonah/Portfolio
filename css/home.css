@@ -608,7 +608,7 @@ header a:link, header a:visited, header a:hover, header a:active {
 
 .slide-nav {
   width: 90px;
-  height: 25px;
+  height: 30px;
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -618,8 +618,7 @@ header a:link, header a:visited, header a:hover, header a:active {
   justify-content: center;
   z-index: 99;
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 25px;
-  border: solid 1px white;
+  border-radius: 15px;
 }
 
 .dots {
