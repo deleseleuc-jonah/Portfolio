@@ -164,15 +164,15 @@ $p-timing: opacity 0.8s 1.5s ease-in;
 ///Slider Images///
 
 .bg1{
-	background: url($slider1) 100% 25% no-repeat $secondary;
+	background: linear-gradient(to bottom, rgba(188, 234, 149, 0.33), rgba(191, 124, 69, 0.43)), url($slider1) 100% 25% no-repeat $secondary;
 	background-size: cover;
 }
 .bg2{
-	background: url($slider2) 65% no-repeat;
+	background: linear-gradient(to bottom, rgba(188, 234, 149, 0.33), rgba(191, 124, 69, 0.43)), url($slider2) 65% no-repeat;
 	background-size: cover;
 }
 .bg3{
-	background: url($slider3) center no-repeat;
+	background: linear-gradient(to bottom, rgba(188, 234, 149, 0.33), rgba(191, 124, 69, 0.43)), url($slider3) center no-repeat;
 	background-size: cover;
 }
 // Responsive //
